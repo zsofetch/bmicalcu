@@ -1,0 +1,79 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Zsofia Antolijao\\source\\repos\\bmicalcu\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2BD7F95E-F16A-49B0-A882-9026EE5AFEF6}|Solution Items{2BD7F95E-F16A-49B0-A882-9026EE5AFEF6}|C:\\Users\\Zsofia Antolijao\\source\\repos\\bmicalcu\\.gitignore.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{2BD7F95E-F16A-49B0-A882-9026EE5AFEF6}|Solution Items{2BD7F95E-F16A-49B0-A882-9026EE5AFEF6}|solutionrelative:.gitignore.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9402A470-1B85-4BA8-AD30-14EFEB956C6C}|bmicalcu\\bmicalcu.csproj|c:\\users\\zsofia antolijao\\source\\repos\\bmicalcu\\bmicalcu\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9402A470-1B85-4BA8-AD30-14EFEB956C6C}|bmicalcu\\bmicalcu.csproj|solutionrelative:bmicalcu\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9402A470-1B85-4BA8-AD30-14EFEB956C6C}|bmicalcu\\bmicalcu.csproj|c:\\users\\zsofia antolijao\\source\\repos\\bmicalcu\\bmicalcu\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{9402A470-1B85-4BA8-AD30-14EFEB956C6C}|bmicalcu\\bmicalcu.csproj|solutionrelative:bmicalcu\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": ".gitignore.txt",
+              "DocumentMoniker": "C:\\Users\\Zsofia Antolijao\\source\\repos\\bmicalcu\\.gitignore.txt",
+              "RelativeDocumentMoniker": ".gitignore.txt",
+              "ToolTip": "C:\\Users\\Zsofia Antolijao\\source\\repos\\bmicalcu\\.gitignore.txt",
+              "RelativeToolTip": ".gitignore.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2026-02-28T16:50:56.421Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{c6f34f0d-7ae5-4f3a-be61-fe0c21ae9eb8}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Zsofia Antolijao\\source\\repos\\bmicalcu\\bmicalcu\\MainPage.xaml.cs",
+              "RelativeDocumentMoniker": "bmicalcu\\MainPage.xaml.cs",
+              "ToolTip": "C:\\Users\\Zsofia Antolijao\\source\\repos\\bmicalcu\\bmicalcu\\MainPage.xaml.cs",
+              "RelativeToolTip": "bmicalcu\\MainPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-28T16:31:02.254Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainPage.xaml",
+              "DocumentMoniker": "C:\\Users\\Zsofia Antolijao\\source\\repos\\bmicalcu\\bmicalcu\\MainPage.xaml",
+              "RelativeDocumentMoniker": "bmicalcu\\MainPage.xaml",
+              "ToolTip": "C:\\Users\\Zsofia Antolijao\\source\\repos\\bmicalcu\\bmicalcu\\MainPage.xaml",
+              "RelativeToolTip": "bmicalcu\\MainPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-02-28T16:29:40.734Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
