@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="bmicalcu.MainPage"
+             BackgroundColor="#0D0D0D">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="24,56,24,40" Spacing="0">
+
+            <Label Text="BMI" FontSize="52" FontAttributes="Bold"
+                   HorizontalOptions="Center" TextColor="#E8FF47" CharacterSpacing="-1"/>
+            <Label Text="CALCULATOR" FontSize="13" CharacterSpacing="6"
+                   HorizontalOptions="Center" TextColor="#555555" Margin="0,0,0,36"/>
+
+            <VerticalStackLayout x:Name="InputPage" Spacing="14">
+
+                <Grid ColumnDefinitions="*,*" ColumnSpacing="12">
+
+                    <Border BackgroundColor="#1A1A1A" StrokeShape="RoundRectangle 20" Stroke="#2A2A2A" Padding="18,16">
+                        <VerticalStackLayout Spacing="6">
+                            <Label Text="AGE" FontSize="10" CharacterSpacing="3"
+                                   HorizontalOptions="Center" TextColor="#555555"/>
+                            <Entry x:Name="AgeEntry" Keyboard="Numeric" Placeholder="—"
+                                   PlaceholderColor="#333333"
+                                   TextChanged="OnAgeTextChanged"
+                                   HorizontalTextAlignment="Center"
+                                   FontSize="38" FontAttributes="Bold"
+                                   TextColor="#E8FF47" BackgroundColor="Transparent"/>
+                            <Label Text="years" FontSize="11"
+                                   HorizontalOptions="Center" TextColor="#444444"/>
+                        </VerticalStackLayout>
+                    </Border>
+
+                    <Border Grid.Column="1" BackgroundColor="#1A1A1A" StrokeShape="RoundRectangle 20" Stroke="#2A2A2A" Padding="18,16">
+                        <VerticalStackLayout Spacing="6">
+                            <Label x:Name="WeightUnitLabel" Text="WEIGHT" FontSize="10" CharacterSpacing="3"
+                                   HorizontalOptions="Center" TextColor="#555555"/>
+                            <Entry x:Name="WeightEntry" Keyboard="Numeric" Placeholder="—"
+                                   PlaceholderColor="#333333"
+                                   TextChanged="OnWeightTextChanged"
+                                   HorizontalTextAlignment="Center"
+                                   FontSize="38" FontAttributes="Bold"
+                                   TextColor="#E8FF47" BackgroundColor="Transparent"/>
+                            <Label x:Name="WeightSubLabel" Text="kg" FontSize="11"
+                                   HorizontalOptions="Center" TextColor="#444444"/>
+                        </VerticalStackLayout>
+                    </Border>
+                </Grid>
+
+                <Border BackgroundColor="#1A1A1A" StrokeShape="RoundRectangle 20" Stroke="#2A2A2A" Padding="20,18">
+                    <VerticalStackLayout Spacing="10">
+                        <Label x:Name="HeightUnitLabel" Text="HEIGHT" FontSize="10" CharacterSpacing="3"
+                               HorizontalOptions="Center" TextColor="#555555"/>
+
+                        <VerticalStackLayout x:Name="CmHeightPanel" Spacing="8">
+                            <Label x:Name="HeightLabel" Text="170 cm" FontSize="40" FontAttributes="Bold"
+                                   HorizontalOptions="Center" TextColor="#FFFFFF"/>
+                            <Slider x:Name="HeightSlider" Minimum="100" Maximum="220" Value="170"
+                                    MinimumTrackColor="#E8FF47" MaximumTrackColor="#2A2A2A"
+                                    ThumbColor="#E8FF47"
+                                    ValueChanged="OnHeightChanged"/>
+                            <Grid ColumnDefinitions="*,*">
+                                <Label Text="100 cm" FontSize="10" TextColor="#333333"/>
+                                <Label Text="220 cm" FontSize="10" HorizontalOptions="End" TextColor="#333333"/>
+                            </Grid>
+                        </VerticalStackLayout>
+
+                        <Grid x:Name="FtInHeightPanel" ColumnDefinitions="*,Auto,*" IsVisible="False"
+                              ColumnSpacing="10" VerticalOptions="Center">
+                            <VerticalStackLayout Spacing="4">
+                                <Entry x:Name="FeetEntry" Keyboard="Numeric" Placeholder="5"
+                                       PlaceholderColor="#333333"
+                                       TextChanged="OnFeetTextChanged"
+                                       HorizontalTextAlignment="Center"
+                                       FontSize="36" FontAttributes="Bold"
+                                       TextColor="#FFFFFF" BackgroundColor="Transparent"/>
+                                <Label Text="ft" FontSize="11" HorizontalOptions="Center" TextColor="#444444"/>
+                            </VerticalStackLayout>
+
+                            <Label Grid.Column="1" Text="·" FontSize="36" TextColor="#444444"
+                                   VerticalOptions="Center" Margin="0,0,0,16"/>
+
+                            <VerticalStackLayout Grid.Column="2" Spacing="4">
+                                <Entry x:Name="InchesEntry" Keyboard="Numeric" Placeholder="7"
+                                       PlaceholderColor="#333333"
+                                       TextChanged="OnInchesTextChanged"
+                                       HorizontalTextAlignment="Center"
+                                       FontSize="36" FontAttributes="Bold"
+                                       TextColor="#FFFFFF" BackgroundColor="Transparent"/>
+                                <Label Text="in" FontSize="11" HorizontalOptions="Center" TextColor="#444444"/>
+                            </VerticalStackLayout>
+                        </Grid>
+                    </VerticalStackLayout>
+                </Border>
+
+                <Grid ColumnDefinitions="*,*" ColumnSpacing="12">
+
+                    <Border BackgroundColor="#1A1A1A" StrokeShape="RoundRectangle 20" Stroke="#2A2A2A" Padding="16,14">
+                        <VerticalStackLayout Spacing="10">
+                            <Label Text="GENDER" FontSize="10" CharacterSpacing="3"
+                                   HorizontalOptions="Center" TextColor="#555555"/>
+                            <Button x:Name="GenderToggleButton" Text="♂ Male"
+                                    Clicked="OnGenderToggle"
+                                    HeightRequest="44" CornerRadius="22"
+                                    BackgroundColor="#1E2A00"
+                                    TextColor="#E8FF47"
+                                    FontAttributes="Bold" FontSize="14"/>
+                        </VerticalStackLayout>
+                    </Border>
+
+                    <Border Grid.Column="1" BackgroundColor="#1A1A1A" StrokeShape="RoundRectangle 20" Stroke="#2A2A2A" Padding="16,14">
+                        <VerticalStackLayout Spacing="10">
+                            <Label Text="UNITS" FontSize="10" CharacterSpacing="3"
+                                   HorizontalOptions="Center" TextColor="#555555"/>
+                            <Picker x:Name="WeightUnitPicker" Title="Weight"
+                                    SelectedIndexChanged="OnWeightUnitChanged"
+                                    TextColor="#FFFFFF" TitleColor="#555555"
+                                    BackgroundColor="Transparent">
+                                <Picker.Items>
+                                    <x:String>kg</x:String>
+                                    <x:String>lb</x:String>
+                                </Picker.Items>
+                            </Picker>
+                            <Picker x:Name="HeightUnitPicker" Title="Height"
+                                    SelectedIndexChanged="OnHeightUnitChanged"
+                                    TextColor="#FFFFFF" TitleColor="#555555"
+                                    BackgroundColor="Transparent">
+                                <Picker.Items>
+                                    <x:String>cm</x:String>
+                                    <x:String>ft / in</x:String>
+                                </Picker.Items>
+                            </Picker>
+                        </VerticalStackLayout>
+                    </Border>
+                </Grid>
+
+                <Button Text="CALCULATE" Clicked="OnCalculateClicked"
+                        BackgroundColor="#E8FF47" TextColor="#0D0D0D"
+                        CornerRadius="30" HeightRequest="62"
+                        FontAttributes="Bold" FontSize="16"
+                        CharacterSpacing="2"
+                        Margin="0,8,0,0"/>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout x:Name="ResultsPage" IsVisible="False" Spacing="0">
+
+                <Border BackgroundColor="#1A1A1A" StrokeShape="RoundRectangle 28" Stroke="#2A2A2A" Padding="32,36" Margin="0,0,0,16">
+                    <VerticalStackLayout Spacing="6">
+                        <Label Text="YOUR RESULT" FontSize="11" CharacterSpacing="4"
+                               HorizontalOptions="Center" TextColor="#555555"/>
+                        <Label x:Name="BmiWhole" FontSize="88" FontAttributes="Bold"
+                               HorizontalOptions="Center" TextColor="#E8FF47"
+                               CharacterSpacing="-2"/>
+                        <Label x:Name="CategoryLabel" FontSize="20" FontAttributes="Bold"
+                               HorizontalOptions="Center" TextColor="#FFFFFF"
+                               CharacterSpacing="3"/>
+                        <Label x:Name="CategoryDesc" FontSize="13"
+                               HorizontalOptions="Center" TextColor="#555555"
+                               Margin="0,8,0,0"/>
+                    </VerticalStackLayout>
+                </Border>
+
+                <Border BackgroundColor="#1A1A1A" StrokeShape="RoundRectangle 20" Stroke="#2A2A2A" Padding="20,18" Margin="0,0,0,14">
+                    <Grid ColumnDefinitions="*,*,*,*" ColumnSpacing="8">
+                        <VerticalStackLayout Spacing="4">
+                            <Label Text="&lt; 18.5" FontSize="12" FontAttributes="Bold" TextColor="#5BA4FF" HorizontalOptions="Center"/>
+                            <Label Text="Under" FontSize="10" TextColor="#444444" HorizontalOptions="Center"/>
+                            <Label Text="weight" FontSize="10" TextColor="#444444" HorizontalOptions="Center"/>
+                        </VerticalStackLayout>
+                        <VerticalStackLayout Grid.Column="1" Spacing="4">
+                            <Label Text="18.5–24.9" FontSize="12" FontAttributes="Bold" TextColor="#E8FF47" HorizontalOptions="Center"/>
+                            <Label Text="Normal" FontSize="10" TextColor="#444444" HorizontalOptions="Center"/>
+                        </VerticalStackLayout>
+                        <VerticalStackLayout Grid.Column="2" Spacing="4">
+                            <Label Text="25–29.9" FontSize="12" FontAttributes="Bold" TextColor="#FFB347" HorizontalOptions="Center"/>
+                            <Label Text="Over" FontSize="10" TextColor="#444444" HorizontalOptions="Center"/>
+                            <Label Text="weight" FontSize="10" TextColor="#444444" HorizontalOptions="Center"/>
+                        </VerticalStackLayout>
+                        <VerticalStackLayout Grid.Column="3" Spacing="4">
+                            <Label Text="≥ 30" FontSize="12" FontAttributes="Bold" TextColor="#FF5C5C" HorizontalOptions="Center"/>
+                            <Label Text="Obese" FontSize="10" TextColor="#444444" HorizontalOptions="Center"/>
+                        </VerticalStackLayout>
+                    </Grid>
+                </Border>
+
+                <Button Text="RECALCULATE" Clicked="OnRecalculateClicked"
+                        BackgroundColor="#E8FF47" TextColor="#0D0D0D"
+                        CornerRadius="30" HeightRequest="62"
+                        FontAttributes="Bold" FontSize="15"
+                        CharacterSpacing="2"/>
+            </VerticalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
